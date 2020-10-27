@@ -1,0 +1,17 @@
+spec:
+  template:
+    spec:
+      containers:
+      - env:
+        livenessProbe:
+          httpGet:
+            path: /db/actuator/health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 180
+        readinessProbe:
+          httpGet:
+            path: /db/actuator/health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 20
