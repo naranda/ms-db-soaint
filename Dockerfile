@@ -1,5 +1,5 @@
 # Start with a base image containing Java runtime
-FROM openjdk:8-jdk-alpine
+FROM redhat-openjdk-18/openjdk18-openshift
 
 # Add a volume pointing to /tmp
 VOLUME /tmp
